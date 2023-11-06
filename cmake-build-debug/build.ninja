@@ -67,6 +67,12 @@ build CMakeFiles/ProjetAgenda.dir/levels_list.c.obj: C_COMPILER__ProjetAgenda_De
   OBJECT_DIR = CMakeFiles\ProjetAgenda.dir
   OBJECT_FILE_DIR = CMakeFiles\ProjetAgenda.dir
 
+build CMakeFiles/ProjetAgenda.dir/list.c.obj: C_COMPILER__ProjetAgenda_Debug C$:/Users/yanni/CLionProjects/ProjetAgenda/list.c || cmake_object_order_depends_target_ProjetAgenda
+  DEP_FILE = CMakeFiles\ProjetAgenda.dir\list.c.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu11
+  OBJECT_DIR = CMakeFiles\ProjetAgenda.dir
+  OBJECT_FILE_DIR = CMakeFiles\ProjetAgenda.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target ProjetAgenda
@@ -75,7 +81,7 @@ build CMakeFiles/ProjetAgenda.dir/levels_list.c.obj: C_COMPILER__ProjetAgenda_De
 #############################################
 # Link the executable ProjetAgenda.exe
 
-build ProjetAgenda.exe: C_EXECUTABLE_LINKER__ProjetAgenda_Debug CMakeFiles/ProjetAgenda.dir/main.c.obj CMakeFiles/ProjetAgenda.dir/levels_cell.c.obj CMakeFiles/ProjetAgenda.dir/levels_list.c.obj
+build ProjetAgenda.exe: C_EXECUTABLE_LINKER__ProjetAgenda_Debug CMakeFiles/ProjetAgenda.dir/main.c.obj CMakeFiles/ProjetAgenda.dir/levels_cell.c.obj CMakeFiles/ProjetAgenda.dir/levels_list.c.obj CMakeFiles/ProjetAgenda.dir/list.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\ProjetAgenda.dir

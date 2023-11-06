@@ -1,8 +1,0 @@
-//
-// Created by Yannis on 06/11/2023.
-//
-
-#ifndef PROJETAGENDA_LEVELS_CELL_H
-#define PROJETAGENDA_LEVELS_CELL_H
-
-#endif //PROJETAGENDA_LEVELS_CELL_H
