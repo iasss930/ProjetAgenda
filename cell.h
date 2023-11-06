@@ -9,7 +9,7 @@
 // Définition des types
 typedef struct s_cell
 {
-    int value;
+    void* value;
     struct s_cell * next;
 } t_cell, *p_cell;
 
@@ -19,5 +19,8 @@ typedef struct s_lvl_cell
     void * next;
 } t_lvl_cell;
 
+
+// Fonctions associées
+p_cell createCell(void*);
 
 #endif //PROJETAGENDA_CELL_H
