@@ -6,7 +6,13 @@
 #define PROJETAGENDA_CELL_H
 
 
-// Définition du type
+// Définition des types
+typedef struct s_cell
+{
+    int value;
+    struct s_cell * next;
+} t_cell, *p_cell;
+
 typedef struct s_lvl_cell
 {
     int value;
