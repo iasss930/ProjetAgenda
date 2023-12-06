@@ -1,19 +1,19 @@
-//
-// Created by Yannis on 06/11/2023.
-//
-
+#include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+
 #include "cell.h"
 
-/// Crée une cellule contenant l'élément passé en argument.
-/// @param element L'élément que contiendra la cellule.
-/// @return Retourne un pointeur sur la cellule créée.
-p_cell createCell(void* element)
-{
-    p_cell myCell = (p_cell) malloc(sizeof(t_cell));
-
-    myCell->value = element;
-    myCell->next = NULL;
-
-    return myCell;
+// Créer une cellule : on donne sa valeur et le nombre de niveaux que possède
+// cette cellule, pour obtenir un pointeur vers cette cellule
+t_d_cell *create_cell(int value, int n_levels) {
+    t_d_cell *cell = malloc(sizeof(t_d_cell)); // alloue de la mémoire
+    cell->value = value;        // cell pointe value qui prendra la valeur
+    cell->max_level = n_levels; // le nombre de niveau de la cellule
+    cell->next = malloc(
+            n_levels * sizeof(t_d_cell *)); // alloue la mémoire des pointeur suivant
+    for (int i = 0; i < n_levels; i++) {
+        cell->next[i] = NULL; // les pointeur pointe à null
+    }
+    return cell;
 }

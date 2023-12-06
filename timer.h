@@ -8,8 +8,7 @@
 #include <time.h>
 
 // timer structure
-typedef struct s_timer
-{
+typedef struct s_timer {
     clock_t _start; // start time
     clock_t _end;   // end time
     double _msecs;  // duration in milliseconds
@@ -45,4 +44,4 @@ void displayTime();
  */
 char *getTimeAsString();
 
-#endif //UNTITLED1_TIMER_H
+#endif // UNTITLED1_TIMER_H
