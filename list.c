@@ -18,7 +18,7 @@ t_d_list *create_list(int max_level) {
 
 
 // Insérer une cellule à niveaux en tête de liste
-void insere_tete_liste(t_d_list* list, t_d_cell* cell,int level){
+void insere_tete_list(t_d_list* list, t_d_cell* cell,int level){
         cell->next[level] = list->head[level];
         list->head[level]=cell;
 }
@@ -51,8 +51,7 @@ void insere_cell(t_d_list *list, t_d_cell *cell, int level){
     t_d_cell* temp = list->head[level];
     if (list->head[level] == NULL || temp->value > cell->value)
     {
-        cell->next[level] = temp;
-        list->head[level] = cell;
+        insere_tete_list(list, cell, level);
     }
     else
     {
