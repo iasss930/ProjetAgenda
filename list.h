@@ -12,11 +12,11 @@ typedef struct s_d_list {
 } t_d_list;
 
 t_d_list *create_list(int);
-void insert_list(t_d_list *, t_d_cell *);
-void insert_cell(t_d_list *, t_d_cell *);
-void display_one_level(t_d_list *, int);
-void display_all_levels(t_d_list *);
-int classical_search(t_d_list *, int, int);
-int expert_search(t_d_list *, t_d_cell *, t_d_cell *, int, int);
+void insere_tete_list(t_d_list *, t_d_cell *, int);
+void insere_cell(t_d_list *, t_d_cell *, int);
+void display_level(t_d_list *, int);
+void display_all(t_d_list *);
+int level_search(t_d_list *, int, int);
+int opti_research(t_d_list *, int, int);
 
 #endif

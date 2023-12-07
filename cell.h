@@ -9,5 +9,6 @@ typedef struct s_d_cell {
     struct s_d_cell **next;
 } t_d_cell;
 
+
 t_d_cell *create_cell(int, int);
 #endif // UNTITLED_CELL_H

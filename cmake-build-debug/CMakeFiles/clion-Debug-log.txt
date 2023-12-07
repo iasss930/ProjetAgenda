@@ -1,10 +1,35 @@
-"C:\Program Files\JetBrains\CLion 2022.3.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2022.3.1/bin/ninja/win/ninja.exe" -G Ninja -S C:\Users\yanni\CLionProjects\ProjetAgenda -B C:\Users\yanni\CLionProjects\ProjetAgenda\cmake-build-debug
--- The C compiler identification is GNU 11.2.0
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja -S "/Users/kaisluce/Library/CloudStorage/OneDrive-Efrei/L2/Semestre 3/ProjetC" -B "/Users/kaisluce/Library/CloudStorage/OneDrive-Efrei/L2/Semestre 3/ProjetC/cmake-build-debug"
+-- The C compiler identification is unknown
 -- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Check for working C compiler: C:/Program Files/JetBrains/CLion 2022.3.1/bin/mingw/bin/gcc.exe - skipped
--- Detecting C compile features
--- Detecting C compile features - done
--- Configuring done
--- Generating done
--- Build files have been written to: C:/Users/yanni/CLionProjects/ProjetAgenda/cmake-build-debug
+-- Detecting C compiler ABI info - failed
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc - broken
+CMake Error at /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeTestCCompiler.cmake:69 (message):
+  The C compiler
+
+    "/usr/bin/cc"
+
+  is not able to compile a simple test program.
+
+  It fails with the following output:
+
+    Change Dir: /Users/kaisluce/Library/CloudStorage/OneDrive-Efrei/L2/Semestre 3/ProjetC/cmake-build-debug/CMakeFiles/CMakeTmp
+    
+    Run Build Command(s):/Applications/CLion.app/Contents/bin/ninja/mac/ninja cmTC_52764 && [1/2] Building C object CMakeFiles/cmTC_52764.dir/testCCompiler.c.o
+    FAILED: CMakeFiles/cmTC_52764.dir/testCCompiler.c.o 
+    /usr/bin/cc   -arch arm64 -o CMakeFiles/cmTC_52764.dir/testCCompiler.c.o -c '/Users/kaisluce/Library/CloudStorage/OneDrive-Efrei/L2/Semestre 3/ProjetC/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c'
+    You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+    ninja: build stopped: subcommand failed.
+    
+    
+
+  
+
+  CMake will not be able to correctly generate this project.
+Call Stack (most recent call first):
+  CMakeLists.txt:2 (project)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/Users/kaisluce/Library/CloudStorage/OneDrive-Efrei/L2/Semestre 3/ProjetC/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+See also "/Users/kaisluce/Library/CloudStorage/OneDrive-Efrei/L2/Semestre 3/ProjetC/cmake-build-debug/CMakeFiles/CMakeError.log".
