@@ -15,9 +15,9 @@ CMake Error at /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/M
 
     Change Dir: /Users/kaisluce/Library/CloudStorage/OneDrive-Efrei/L2/Semestre 3/ProjetC/cmake-build-debug/CMakeFiles/CMakeTmp
     
-    Run Build Command(s):/Applications/CLion.app/Contents/bin/ninja/mac/ninja cmTC_52764 && [1/2] Building C object CMakeFiles/cmTC_52764.dir/testCCompiler.c.o
-    FAILED: CMakeFiles/cmTC_52764.dir/testCCompiler.c.o 
-    /usr/bin/cc   -arch arm64 -o CMakeFiles/cmTC_52764.dir/testCCompiler.c.o -c '/Users/kaisluce/Library/CloudStorage/OneDrive-Efrei/L2/Semestre 3/ProjetC/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c'
+    Run Build Command(s):/Applications/CLion.app/Contents/bin/ninja/mac/ninja cmTC_29ad1 && [1/2] Building C object CMakeFiles/cmTC_29ad1.dir/testCCompiler.c.o
+    FAILED: CMakeFiles/cmTC_29ad1.dir/testCCompiler.c.o 
+    /usr/bin/cc   -arch arm64 -o CMakeFiles/cmTC_29ad1.dir/testCCompiler.c.o -c '/Users/kaisluce/Library/CloudStorage/OneDrive-Efrei/L2/Semestre 3/ProjetC/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c'
     You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
     ninja: build stopped: subcommand failed.
     
