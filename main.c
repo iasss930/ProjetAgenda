@@ -10,7 +10,7 @@
 #include "cell.h"
 #include "list.h"
 #include "timer.h"
-#include "agenda.h
+#include "agenda.h"
 
 int main(){
     setlocale(LC_ALL, "fr_FR.UTF-8");
