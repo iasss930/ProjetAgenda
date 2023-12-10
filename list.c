@@ -58,29 +58,6 @@ void display_all(t_d_list list){
 }
 
 
-void insert_cell(t_d_list *list, t_d_cell *cell, int lvl){
-    t_d_cell* temp = list->head[lvl];
-    if (temp == NULL || temp->value > cell->value){
-        insert_tete(list, cell, lvl);
-    }
-    else {
-        for (int i = 0; i <= lvl; i++){
-            t_d_cell *prev = temp;
-            while ((temp->value < cell->value) && (temp->next[lvl] != NULL)) {
-                temp = temp->next[lvl];
-            }
-            if (temp->next[lvl] == NULL && temp->value < cell->value) {
-                temp->next[lvl] = cell;
-            } else {
-                cell->next[lvl] = prev->next[lvl];
-                prev->next[lvl] = cell;
-            }
-        }
-    }
-    return;
-}
-
-
 void fill_list(t_d_list *list){
     int taille = 2;
     for (int i = 1; i <= list->max_level; i++) {
@@ -91,7 +68,7 @@ void fill_list(t_d_list *list){
     for (int i = 0; i < taille; i++){
         tab[i] = 0;
     }
-    for (int i = 0; i < taille; i++){
+    for (int i = 0; i < list->max_level; i++){
         int pas = taille / (i+2);
         int indice = 0;
         for (int j = 1; j <= i + 1; i++){
@@ -104,6 +81,53 @@ void fill_list(t_d_list *list){
         insert_cell(list, cell, tab[i]);
     }
     return;
+}
+
+
+void insert_cell(t_d_list *list, t_d_cell *cell){
+    int level;
+    t_d_cell *cell0;
+    cell0 = list->head[0];
+    while (cell0->next[0] != NULL &&
+           cell0->next[0]->value <
+           cell->value) {
+        cell0 = cell0->next[0];
+    }
+    cell->next[0] = cell0->next[0];
+    cell0->next[0] = cell;
+    int taille = 2;
+    for (int i = 1; i <= list->max_level; i++) {
+        taille = taille * 2;
+    }
+    taille -= 1;
+    int tab[taille];
+    for (int i = 0; i < taille; i++){
+        tab[i] = 0;
+    }
+    for (int i = 0; i < list->max_level - 1; i++){
+        int pas = taille / (i+2);
+        int indice = 0;
+        for (int j = 1; j <= i + 1; i++){
+            indice += pas;
+            tab[indice] += 1;
+        }
+    }
+    t_d_cell *next = list->head[0];
+    while(cell0->next != NULL){
+        int indice = 0;
+        for (int i = 1; i <= tab[indice]; i++){
+            t_d_cell *prev = list->head[i];
+            if (prev == NULL) {
+                list->head[i] = next;
+            }
+            else {
+                while (prev->next != NULL) {
+                    prev = prev->next;
+                }
+                prev->next = next;
+            }
+        }
+    }
 }
 
 int search(t_d_list list,int val, int lvl){
