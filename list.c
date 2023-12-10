@@ -4,120 +4,100 @@
 
 #include "list.h"
 
-// Créer une liste à niveau vide : on donnera le nombre maximal de niveaux que
-// possède cette liste
-t_d_list *create_list(int max_level) {
+
+t_d_list *create_list(int lvl){
     t_d_list *list = malloc(sizeof(t_d_list));
-    list->head = malloc(max_level * sizeof(t_d_cell *)); // aloue la mémoire
-    for (int i = 0; i < max_level; i++) {
-        list->head[i] = NULL; // met les pointeurs à null
+    list->max_level = lvl;
+    list->head = malloc(lvl * sizeof(t_d_cell*));
+    for int(i = 0; i < lvl; i++){
+        list->head[i] = NULL;
     }
-    list->max_level = max_level;
-    return list;
+    return list
 }
 
 
-// Insérer une cellule à niveaux en tête de liste
-void insere_tete_list(t_d_list* list, t_d_cell* cell,int level){
-        cell->next[level] = list->head[level];
-        list->head[level]=cell;
+void insert_tete(t_d_list *list, t_d_cell *cell, int lvl){
+    for(int i = 0; i <= lvl; i++){
+        cell->next[i] = list->head[i];
+        list->head[i] = cell;
+    }
 }
 
 
-// Affiche l’ensemble des cellules de la liste pour un niveau donné
-void display_level(t_d_list list, int level){
-    printf("[list head_%d @-]-->",level);
-    t_d_cell* temp = list.head[level];
-    while(temp!=NULL)
+void display_level(t_d_list list, int lvl){
+    printf("[list head_%2d @-]-->",lvl);
+    t_d_cell* cell = list.head[level];
+    while(cell!=NULL)
     {
-        printf("[ %d|@-]-->",temp->value);
-        temp=temp->next[level];
+        printf("[%3d|@-]-->",cell->value);
+        cel=cell->next[lvl];
     }
     printf("NULL\n");
+    return;
 }
 
 
-// Afficher tous les niveaux de la liste
-void display_all(t_d_list *list){
-    for (int i=0;i<list.max_level;i++)
-    {
-        display_level(list,i);
-    }
-}
-
-
-// Insére une cellule à niveau dans la liste, au bon endroit, en maintenant la liste triée par ordre croissant
-void insere_cell(t_d_list *list, t_d_cell *cell, int level){
-    t_d_cell* temp = list->head[level];
-    if (list->head[level] == NULL || temp->value > cell->value)
-    {
-        insere_tete_list(list, cell, level);
-    }
-    else
-    {
-        t_d_cell *prev = temp;
-        while((temp->value < cell->value) && (temp->next[level] != NULL))
-        {
-            temp=temp->next[level];
-        }
-        if (temp->next[level] == NULL && temp->value < cell->value)
-        {
-            temp->next[level] = cell;
-        }
-        else
-        {
-            cell->next[level] = prev->next[level];
-            prev->next[level] = cell;
-        }
-    }
-}
-
-
-int level_search(t_d_list *list, int value, int level){
-    t_d_cell* researchcell = list.head[level];
-    while(researchcell != NULL) {
-        if (researchcell->value==val) {
-            return 1;
-        }
-        researchcell = researchcell->next[level];
-    }
-    return 0;
-}
-
-int opti_research(t_d_list *list, int value){
-    t_d_cell* temp;
-    t_d_cell * prev;
-    int j=list.max_level-1;
-    temp = list.head[j];
-    while (temp!=NULL)
-    {
-        if (temp->value == value)
-        {
-            return 1;
-        }
-        else if (temp->value >value && temp == list.head[j])
-        {
-            if(j>0){
-                j--;
+void display_all(t_d_list list){
+    for(int i = 0; i < list.max_level; i++){
+        printf("[list head_%2d @-]", i);
+        t_d_cell *cell0 = list.head[0];
+        t_d_cell *cell_lvl = list.head[i];
+        while(cell0 != NULL){
+            if (cell_lvl == cell0){
+                printf("-->[ %3d|@-]"; cell_lvl.value);
+                cell_lvl = cell_lvl->next[i];
             }
-            temp = list.head[j];
-        }
-        else if (value > temp->value)
-        {
-            prev=temp;
-            if(j>0){
-                j--;
+            else{
+                printf("--------");
             }
-            temp = temp->next[j];
-        }
-        else
-        {
-            if(j>0){
-                j--;
-            }
-            temp=prev->next[j];
+            cell0 = cell0->next[0];
         }
     }
-    return 0;
+    return;
 }
 
+
+void insert_cell(t_d_list *list, t_d_cell *cell, int lvl){
+    t_d_cell* temp = list->head[lvl];
+    if (temp == NULL || temp->value > cell->value){
+        insert_tete(list, cell, lvl);
+    }
+    else {
+        for int(i = 0; i <= lvl){
+            t_d_cell *prev = temp;
+            while ((temp->value < cell->value) && (temp->next[lvl] != NULL)) {
+                temp = temp->next[lvl];
+            }
+            if (temp->next[lvl] == NULL && temp->value < cell->value) {
+                temp->next[lvl] = cell;
+            } else {
+                cell->next[lvl] = prev->next[lvl];
+                prev->next[lvl] = cell;
+            }
+        }
+    }
+    return;
+}
+
+
+void fill_list(t_d_list *list){
+    taille = 2
+    for (int i = 1; i <= list->max_level; i++) {
+        taille = taille * 2;
+    }
+    taille -= 1;
+    int *tab[taille] = [0];
+    for (int i = 0; i < taille; i++){
+        int pas = taille / (i+2);
+        int indice = 0;
+        for (int j = 1; j <= i + 1; i++){
+            indice += pas;
+            tab[indice] += 1;
+        }
+    }
+    for(int i = 0; i < taille; i++){
+        t_d_cell  *cell = create_cell(i + 1, list->max_level);
+        insert_cell(list, cell, tab[i]);
+    }
+    return;
+}
