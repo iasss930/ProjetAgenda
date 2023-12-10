@@ -12,3 +12,4 @@ t_d_cell *create_cell(int value, int n_levels) {
         cell->next[i] = NULL; // les pointeurs pointe à null
     }
     return cell;
+}
