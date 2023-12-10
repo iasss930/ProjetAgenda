@@ -9,7 +9,7 @@ t_d_list *create_list(int lvl){
     t_d_list *list = malloc(sizeof(t_d_list));
     list->max_level = lvl;
     list->head = malloc(lvl * sizeof(t_d_cell*));
-    for int(i = 0; i < lvl; i++){
+    for (int i = 0; i < lvl; i++){
         list->head[i] = NULL;
     }
     return list
@@ -26,11 +26,11 @@ void insert_tete(t_d_list *list, t_d_cell *cell, int lvl){
 
 void display_level(t_d_list list, int lvl){
     printf("[list head_%2d @-]-->",lvl);
-    t_d_cell* cell = list.head[level];
+    t_d_cell* cell = list.head[lvl];
     while(cell!=NULL)
     {
         printf("[%3d|@-]-->",cell->value);
-        cel=cell->next[lvl];
+        cell = cell->next[lvl];
     }
     printf("NULL\n");
     return;
@@ -81,7 +81,7 @@ void insert_cell(t_d_list *list, t_d_cell *cell, int lvl){
 
 
 void fill_list(t_d_list *list){
-    taille = 2
+    int taille = 2;
     for (int i = 1; i <= list->max_level; i++) {
         taille = taille * 2;
     }
@@ -97,7 +97,7 @@ void fill_list(t_d_list *list){
     }
     for(int i = 0; i < taille; i++){
         t_d_cell  *cell = create_cell(i + 1, list->max_level);
-        insert_cell(list, cell, tab[i]);
+        insert_cell(list, cell, *tab[i]);
     }
     return;
 }
