@@ -16,3 +16,7 @@ void display_level(t_d_list, int);
 void display_all(t_d_list);
 void insert_cell(t_d_list *, t_d_cell *, int);
 void fill_list(t_d_list *);
+int search(t_d_list,int, int);
+int dicho_search(t_d_list, int);
+
+#endif

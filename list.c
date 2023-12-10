@@ -12,7 +12,7 @@ t_d_list *create_list(int lvl){
     for (int i = 0; i < lvl; i++){
         list->head[i] = NULL;
     }
-    return list
+    return list;
 }
 
 
@@ -44,7 +44,7 @@ void display_all(t_d_list list){
         t_d_cell *cell_lvl = list.head[i];
         while(cell0 != NULL){
             if (cell_lvl == cell0){
-                printf("-->[ %3d|@-]"; cell_lvl.value);
+                printf("-->[ %3d|@-]", cell_lvl->value);
                 cell_lvl = cell_lvl->next[i];
             }
             else{
@@ -52,6 +52,7 @@ void display_all(t_d_list list){
             }
             cell0 = cell0->next[0];
         }
+        printf("\n");
     }
     return;
 }
@@ -63,7 +64,7 @@ void insert_cell(t_d_list *list, t_d_cell *cell, int lvl){
         insert_tete(list, cell, lvl);
     }
     else {
-        for int(i = 0; i <= lvl){
+        for (int i = 0; i <= lvl; i++){
             t_d_cell *prev = temp;
             while ((temp->value < cell->value) && (temp->next[lvl] != NULL)) {
                 temp = temp->next[lvl];
@@ -86,7 +87,10 @@ void fill_list(t_d_list *list){
         taille = taille * 2;
     }
     taille -= 1;
-    int *tab[taille] = [0];
+    int tab[taille];
+    for (int i = 0; i < taille; i++){
+        tab[i] = 0;
+    }
     for (int i = 0; i < taille; i++){
         int pas = taille / (i+2);
         int indice = 0;
@@ -97,7 +101,56 @@ void fill_list(t_d_list *list){
     }
     for(int i = 0; i < taille; i++){
         t_d_cell  *cell = create_cell(i + 1, list->max_level);
-        insert_cell(list, cell, *tab[i]);
+        insert_cell(list, cell, tab[i]);
     }
     return;
+}
+
+int search(t_d_list list,int val, int lvl){
+    t_d_cell* researchcell = list.head[lvl];
+    while(researchcell!=NULL) {
+        if (researchcell->value==val) {
+            return 1;
+        }
+        researchcell = researchcell->next[lvl];
+    }
+    return 0;
+}
+
+
+int dicho_search(t_d_list list, int val){
+    t_d_cell* temp;
+    t_d_cell * prev;
+    int j=list.max_level-1;
+    temp = list.head[j];
+    while (temp!=NULL)
+    {
+        if (temp->value == val)
+        {
+            return 1;
+        }
+        else if (temp->value >val && temp == list.head[j])
+        {
+            if(j>0){
+                j--;
+            }
+            temp = list.head[j];
+        }
+        else if (val > temp->value)
+        {
+            prev=temp;
+            if(j>0){
+                j--;
+            }
+            temp = temp->next[j];
+        }
+        else
+        {
+            if(j>0){
+                j--;
+            }
+            temp=prev->next[j];
+        }
+    }
+    return 0;
 }

@@ -58,6 +58,12 @@ build CMakeFiles/untitled.dir/main.c.o: C_COMPILER__untitled_Debug /Users/kaislu
   OBJECT_DIR = CMakeFiles/untitled.dir
   OBJECT_FILE_DIR = CMakeFiles/untitled.dir
 
+build CMakeFiles/untitled.dir/list.c.o: C_COMPILER__untitled_Debug /Users/kaisluce/Library/CloudStorage/OneDrive-Efrei/L2/Semestre$ 3/ProjetC/list.c || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles/untitled.dir/list.c.o.d
+  FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics -std=gnu2x
+  OBJECT_DIR = CMakeFiles/untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles/untitled.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target untitled
@@ -66,7 +72,7 @@ build CMakeFiles/untitled.dir/main.c.o: C_COMPILER__untitled_Debug /Users/kaislu
 #############################################
 # Link the executable untitled
 
-build untitled: C_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/timer.c.o CMakeFiles/untitled.dir/main.c.o
+build untitled: C_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/timer.c.o CMakeFiles/untitled.dir/main.c.o CMakeFiles/untitled.dir/list.c.o
   FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk
   OBJECT_DIR = CMakeFiles/untitled.dir
   POST_BUILD = :
