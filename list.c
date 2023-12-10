@@ -106,6 +106,11 @@ void fill_list(t_d_list *list){
     return;
 }
 
+
+void insert_cell(t_d_list *list, t_d_cell *cell){
+
+}
+
 int search(t_d_list list,int val, int lvl){
     t_d_cell* researchcell = list.head[lvl];
     while(researchcell!=NULL) {
