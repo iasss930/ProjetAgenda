@@ -14,7 +14,7 @@
 
 int main(){
     setlocale(LC_ALL, "fr_FR.UTF-8");
-    t_agenda *agenda = creerAgenda();
+    t_agenda *agenda = create_agenda();
     t_recherchecontact search;
     char *nom;
     char *prenom;

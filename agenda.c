@@ -57,7 +57,7 @@ char *minuscule(char *nom_prenom) {
 }
 
 
-t_agenda *creerAgenda(void) {
+t_agenda *create_agenda(void) {
     t_agenda *agenda = (t_agenda *)malloc(sizeof(t_agenda));
     agenda->max_level = 4;
     agenda->contacts = (t_contact *)malloc(4 * sizeof(t_contact));
@@ -68,31 +68,23 @@ t_agenda *creerAgenda(void) {
 }
 
 
-t_contact *creerContact(char *nom, char *prenom, int max_level) {
-    t_contact *contact = (t_contact *)malloc(
-            sizeof(t_contact)); // allocation de mémoire pour contact
-    contact->nom =
-            (char *)malloc(strlen(nom) + 1); // allocation de mémoire pour le nom plus
-    // 1 pour le caractère de fin de chaine
-    strcpy(contact->nom, nom); // on copie le nom
-    contact->prenom = (char *)malloc(
-            strlen(prenom) + 1); // allocation de mémoire pour le prénom plus 1 pour
-    // le caractère de fin de chaine
-    strcpy(contact->prenom, prenom); // on copie le prénom
-    contact->nom_prenom =
-            (char *)malloc(strlen(nom) + strlen(prenom) +
-                           2); // allocation de mémoire pour le nom_prenom plus 1 et
-    // pour le caractère de fin plus 1
+t_contact *create_contact(char *nom, char *prenom, int max_level) {
+    t_contact *contact = (t_contact *) malloc(sizeof(t_contact));
+    contact->nom = (char *) malloc(strlen(nom) + 1);
+    strcpy(contact->nom, nom);
+    contact->prenom = (char *) malloc(strlen(prenom) + 1);
+    strcpy(contact->prenom, prenom);
+    contact->nom_prenom = (char *) malloc(strlen(nom) + strlen(prenom) + 2);
     strcpy(contact->nom_prenom, minuscule(nom));
-    strcat(contact->nom_prenom,
-           "_"); // ajoute la chaine à la suite à l'aide de strcat
+    strcat(contact->nom_prenom, "_");
     strcat(contact->nom_prenom, minuscule(prenom));
     contact->rendezvous = NULL;
     contact->max_level = max_level;
-    contact->next = (t_contact *)malloc(
-            max_level * sizeof(t_contact)); // alloue la mémoire des pointeur suivant
+    contact->next = (t_contact *) malloc(max_level * sizeof(t_contact));
     for (int i = 0; i < max_level; i++) {
-        contact->next[i] = NULL; // met les pointeur à null
+        contact->next[i] = NULL;
+        return contact;
     }
-    return contact;
 }
+
+

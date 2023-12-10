@@ -36,7 +36,8 @@ typedef struct s_recherchecontact {
 
 char *scanString(char *);
 char *minuscule(char *);
-
+t_agenda *create_agenda(void);
+t_contact *create_contact(char *, char *, int);
 
 
 #endif
