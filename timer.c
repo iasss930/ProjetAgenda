@@ -3,8 +3,8 @@
 //
 
 #include "timer.h"
-#include <malloc.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 // start the timer
 void startTimer() { _timer._start = clock(); }
