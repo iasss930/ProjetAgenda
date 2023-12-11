@@ -42,21 +42,6 @@ char *scanString(char *question) {
 }
 
 
-char *minuscule(char *nom_prenom) {
-    char *result = (char *)malloc(strlen(nom_prenom) + 1);
-    if (result == NULL) {
-        printf("Allocation de mémoire a échoué.");
-        exit;
-    }
-    for (int i = 0; nom_prenom[i] != '\0'; i++) {
-        result[i] = tolower(nom_prenom[i]);
-    }
-    result[strlen(nom_prenom)] = '\0';
-
-    return result;
-}
-
-
 t_agenda *create_agenda(void) {
     t_agenda *agenda = (t_agenda *)malloc(sizeof(t_agenda));
     agenda->max_level = 4;
@@ -85,6 +70,74 @@ t_contact *create_contact(char *nom, char *prenom, int max_level) {
         contact->next[i] = NULL;
         return contact;
     }
+}
+
+
+void display_ag_level(t_agenda agenda, int level) {
+    // On commence par récupérer la tête de la liste correspondant au niveau spécifié
+    t_contact *contact = agenda.contacts[level];
+
+    // Affichage du niveau de l'agenda actuel
+    printf("[Agenda_%d @-]", level);
+
+    // Vérification si la liste est vide
+    if (contact == NULL) {
+        printf("-->NULL\n"); // Si la liste est vide, affichage de NULL et sortie de la fonction
+        return;
+    }
+
+    // Parcours des éléments du niveau et affichage des valeurs
+    while (contact != NULL) {
+        printf("-->[%s|@-]", contact->nom_prenom); // Affichage de la valeur de la cellule
+        contact = contact->next[level]; // Passage à la cellule suivante dans ce niveau
+    }
+
+    // Affichage de NULL pour indiquer la fin du niveau
+    printf("-->NULL\n");
+}
+
+
+void display_agenda(t_agenda agenda) {
+    for (int i = 0; i < agenda.max_level; i++) {
+        display_ag_level(agenda, i);
+    }
+}
+
+
+void insert_contact(t_agenda *agenda, t_contact *contact, t_contact *prev, t_contact *next) {
+    if (agenda->contacts[0] == NULL){
+        for(int i = 0; i < 4; i++){
+            agenda->contacts[i] = contact;
+        }
+        return;
+    }
+    for (int i = 0; i < 4; i++){
+        t_contact *prev = agenda->contacts[i];
+        t_contact *cont = agenda->contacts[i]->next;
+        while(minuscule(cont->nom_prenom)[3-i] > minuscule(contact->nom_prenom)[3-i]){
+            prev = cont;
+            cont = cont->next[i];
+        }
+        contact->next[i] = cont;
+        prev->next[i] = contact;
+    }
+    contact++;
+}
+
+
+
+char *minuscule(char *nom_prenom) {
+    char *result = (char *)malloc(strlen(nom_prenom) + 1);
+    if (result == NULL) {
+        printf("Allocation de mémoire a échoué.");
+        exit;
+    }
+    for (int i = 0; nom_prenom[i] != '\0'; i++) {
+        result[i] = tolower(nom_prenom[i]);
+    }
+    result[strlen(nom_prenom)] = '\0';
+
+    return result;
 }
 
 
