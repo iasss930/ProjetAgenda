@@ -3,4 +3,4 @@ project(untitled C)
 
 set(CMAKE_C_STANDARD 23)
 
-add_executable(untitled timer.h timer.c main.c  list.c main.c agenda.c agenda.h main.c)
+add_executable( timer.h timer.c main.c  list.c main.c agenda.c agenda.h main.c main.c menu.h menu.c main.c main.c agenda.c list.c list.c list.h)

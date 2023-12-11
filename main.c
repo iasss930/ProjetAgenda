@@ -11,23 +11,28 @@
 #include "list.h"
 #include "timer.h"
 #include "agenda.h"
+#include "menu.h"
 
 int main(){
-    setlocale(LC_ALL, "fr_FR.UTF-8");
     t_agenda *agenda = create_agenda();
-    t_recherchecontact search;
-    char *nom;
-    char *prenom;
-    int jour, mois, annee, heure, minutes, heure2, minutes2;
-    char *objet;
-    t_contact *contact;
-    t_rendezvous *rdv;
-    int choix;
-    char c, t[60], t1[60];
-    char date[10], time[5], chx[5];
-    char aff=' ';
-    int nbc, nbr;
-    return 0;
+    int choix = 1;
+    while(choix != 0){
+        printf("Que voulez-vous faire?\n\n"
+               "1. ajouter un contact\n"
+               "2. afficher un niveau de l'agenda\n"
+               "3. afficher tout l'agenda\n"
+               "0. quitter\n");
+        scanf("%d", &choix);
+        switch (choix) {
+            case 1 :
+                add_contact(agenda);
+            case 2:
+                affiche_level(agenda);
+            case 3:
+                display_agenda(*agenda);
+            break;
+        }
+    }
 }
 
 
