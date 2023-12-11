@@ -110,26 +110,26 @@ CMakeFiles/untitled.dir/list.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/untitled.dir/list.c.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\maxgo\CLionProjects\ProjetAgenda\list.c -o CMakeFiles\untitled.dir\list.c.s
 
-CMakeFiles/untitled.dir/cell.c.obj: CMakeFiles/untitled.dir/flags.make
-CMakeFiles/untitled.dir/cell.c.obj: C:/Users/maxgo/CLionProjects/ProjetAgenda/cell.c
-CMakeFiles/untitled.dir/cell.c.obj: CMakeFiles/untitled.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\maxgo\CLionProjects\ProjetAgenda\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/untitled.dir/cell.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/untitled.dir/cell.c.obj -MF CMakeFiles\untitled.dir\cell.c.obj.d -o CMakeFiles\untitled.dir\cell.c.obj -c C:\Users\maxgo\CLionProjects\ProjetAgenda\cell.c
+CMakeFiles/untitled.dir/agenda.c.obj: CMakeFiles/untitled.dir/flags.make
+CMakeFiles/untitled.dir/agenda.c.obj: C:/Users/maxgo/CLionProjects/ProjetAgenda/agenda.c
+CMakeFiles/untitled.dir/agenda.c.obj: CMakeFiles/untitled.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\maxgo\CLionProjects\ProjetAgenda\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/untitled.dir/agenda.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/untitled.dir/agenda.c.obj -MF CMakeFiles\untitled.dir\agenda.c.obj.d -o CMakeFiles\untitled.dir\agenda.c.obj -c C:\Users\maxgo\CLionProjects\ProjetAgenda\agenda.c
 
-CMakeFiles/untitled.dir/cell.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/untitled.dir/cell.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\maxgo\CLionProjects\ProjetAgenda\cell.c > CMakeFiles\untitled.dir\cell.c.i
+CMakeFiles/untitled.dir/agenda.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/untitled.dir/agenda.c.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\maxgo\CLionProjects\ProjetAgenda\agenda.c > CMakeFiles\untitled.dir\agenda.c.i
 
-CMakeFiles/untitled.dir/cell.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/untitled.dir/cell.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\maxgo\CLionProjects\ProjetAgenda\cell.c -o CMakeFiles\untitled.dir\cell.c.s
+CMakeFiles/untitled.dir/agenda.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/untitled.dir/agenda.c.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\maxgo\CLionProjects\ProjetAgenda\agenda.c -o CMakeFiles\untitled.dir\agenda.c.s
 
 # Object files for target untitled
 untitled_OBJECTS = \
 "CMakeFiles/untitled.dir/timer.c.obj" \
 "CMakeFiles/untitled.dir/main.c.obj" \
 "CMakeFiles/untitled.dir/list.c.obj" \
-"CMakeFiles/untitled.dir/cell.c.obj"
+"CMakeFiles/untitled.dir/agenda.c.obj"
 
 # External object files for target untitled
 untitled_EXTERNAL_OBJECTS =
@@ -137,7 +137,7 @@ untitled_EXTERNAL_OBJECTS =
 untitled.exe: CMakeFiles/untitled.dir/timer.c.obj
 untitled.exe: CMakeFiles/untitled.dir/main.c.obj
 untitled.exe: CMakeFiles/untitled.dir/list.c.obj
-untitled.exe: CMakeFiles/untitled.dir/cell.c.obj
+untitled.exe: CMakeFiles/untitled.dir/agenda.c.obj
 untitled.exe: CMakeFiles/untitled.dir/build.make
 untitled.exe: CMakeFiles/untitled.dir/linkLibs.rsp
 untitled.exe: CMakeFiles/untitled.dir/objects1.rsp

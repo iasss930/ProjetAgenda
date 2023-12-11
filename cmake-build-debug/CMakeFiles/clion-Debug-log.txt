@@ -1,4 +1,4 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja -S "/Users/kaisluce/Library/CloudStorage/OneDrive-Efrei/L2/Semestre 3/ProjetC" -B "/Users/kaisluce/Library/CloudStorage/OneDrive-Efrei/L2/Semestre 3/ProjetC/cmake-build-debug"
--- Configuring done
--- Generating done
--- Build files have been written to: /Users/kaisluce/Library/CloudStorage/OneDrive-Efrei/L2/Semestre 3/ProjetC/cmake-build-debug
+"C:\Program Files\JetBrains\CLion 2023.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" -S C:\Users\maxgo\CLionProjects\ProjetAgenda -B C:\Users\maxgo\CLionProjects\ProjetAgenda\cmake-build-debug
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: C:/Users/maxgo/CLionProjects/ProjetAgenda/cmake-build-debug

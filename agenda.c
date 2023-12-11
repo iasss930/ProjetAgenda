@@ -7,9 +7,6 @@
 #include "agenda.h"
 
 
-const int *LOG = "../log3.txt";
-const int *SAV = "../sauvegarde.txt";
-
 int cobtacts=0;
 int rdv=0;
 
@@ -45,7 +42,7 @@ char *scanString(char *question) {
 t_agenda *create_agenda(void) {
     t_agenda *agenda = (t_agenda *)malloc(sizeof(t_agenda));
     agenda->max_level = 4;
-    agenda->contacts = (t_contact *)malloc(4 * sizeof(t_contact));
+    agenda->contacts = (t_contact **)malloc(4 * sizeof(t_contact*));
     for (int i = 0; i < 4; i++) {
         agenda->contacts[i] = NULL;
     }
@@ -65,11 +62,11 @@ t_contact *create_contact(char *nom, char *prenom, int max_level) {
     strcat(contact->nom_prenom, minuscule(prenom));
     contact->rendezvous = NULL;
     contact->max_level = max_level;
-    contact->next = (t_contact *) malloc(max_level * sizeof(t_contact));
+    contact->next = (t_contact **) malloc(max_level * sizeof(t_contact*));
     for (int i = 0; i < max_level; i++) {
         contact->next[i] = NULL;
-        return contact;
     }
+    return contact;
 }
 
 
@@ -113,8 +110,18 @@ void insert_contact(t_agenda *agenda, t_contact *contact) {
     }
     for (int i = 0; i < 4; i++){
         t_contact *prev = agenda->contacts[i];
+        if (prev->next[i] == NULL){
+            if(minuscule(prev->nom_prenom)[3-i] > minuscule(contact->nom_prenom)[3-i]) {
+                agenda->contacts[i] = contact;
+                contact->next[i] = prev;
+            }
+            else{
+                prev->next[i] = contact;
+            }
+            return;
+        }
         t_contact *cont = agenda->contacts[i]->next;
-        while(minuscule(cont->nom_prenom)[3-i] > minuscule(contact->nom_prenom)[3-i]){
+        while(minuscule(cont->nom_prenom)[3-i] < minuscule(contact->nom_prenom)[3-i]){
             prev = cont;
             cont = cont->next[i];
         }

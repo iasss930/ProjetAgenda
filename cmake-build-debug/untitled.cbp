@@ -17,8 +17,8 @@
 					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/maxgo/CLionProjects/ProjetAgenda/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="untitled">
-				<Option output="C:/Users/maxgo/CLionProjects/ProjetAgenda/cmake-build-debug/untitled.exe" prefix_auto="0" extension_auto="0"/>
+			<Target title="timer.h">
+				<Option output="C:/Users/maxgo/CLionProjects/ProjetAgenda/cmake-build-debug/timer.h.exe" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="C:/Users/maxgo/CLionProjects/ProjetAgenda/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -30,14 +30,14 @@
 					<Add directory="C:/Program Files/JetBrains/CLion 2023.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/maxgo/CLionProjects/ProjetAgenda/cmake-build-debug/Makefile&quot;  VERBOSE=1 untitled"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/maxgo/CLionProjects/ProjetAgenda/cmake-build-debug/Makefile&quot;  VERBOSE=1 timer.h"/>
 					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/maxgo/CLionProjects/ProjetAgenda/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/maxgo/CLionProjects/ProjetAgenda/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/maxgo/CLionProjects/ProjetAgenda/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="untitled/fast">
-				<Option output="C:/Users/maxgo/CLionProjects/ProjetAgenda/cmake-build-debug/untitled.exe" prefix_auto="0" extension_auto="0"/>
+			<Target title="timer.h/fast">
+				<Option output="C:/Users/maxgo/CLionProjects/ProjetAgenda/cmake-build-debug/timer.h.exe" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="C:/Users/maxgo/CLionProjects/ProjetAgenda/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -49,7 +49,7 @@
 					<Add directory="C:/Program Files/JetBrains/CLion 2023.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/maxgo/CLionProjects/ProjetAgenda/cmake-build-debug/Makefile&quot;  VERBOSE=1 untitled/fast"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/maxgo/CLionProjects/ProjetAgenda/cmake-build-debug/Makefile&quot;  VERBOSE=1 timer.h/fast"/>
 					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/maxgo/CLionProjects/ProjetAgenda/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/maxgo/CLionProjects/ProjetAgenda/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/maxgo/CLionProjects/ProjetAgenda/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -76,26 +76,38 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/maxgo/CLionProjects/ProjetAgenda/agenda.c">
+			<Option target="timer.h"/>
+		</Unit>
+		<Unit filename="C:/Users/maxgo/CLionProjects/ProjetAgenda/agenda.h">
+			<Option target="timer.h"/>
+		</Unit>
 		<Unit filename="C:/Users/maxgo/CLionProjects/ProjetAgenda/cell.c">
-			<Option target="untitled"/>
+			<Option target="timer.h"/>
 		</Unit>
 		<Unit filename="C:/Users/maxgo/CLionProjects/ProjetAgenda/cell.h">
-			<Option target="untitled"/>
+			<Option target="timer.h"/>
 		</Unit>
 		<Unit filename="C:/Users/maxgo/CLionProjects/ProjetAgenda/list.c">
-			<Option target="untitled"/>
+			<Option target="timer.h"/>
 		</Unit>
 		<Unit filename="C:/Users/maxgo/CLionProjects/ProjetAgenda/list.h">
-			<Option target="untitled"/>
+			<Option target="timer.h"/>
 		</Unit>
 		<Unit filename="C:/Users/maxgo/CLionProjects/ProjetAgenda/main.c">
-			<Option target="untitled"/>
+			<Option target="timer.h"/>
+		</Unit>
+		<Unit filename="C:/Users/maxgo/CLionProjects/ProjetAgenda/menu.c">
+			<Option target="timer.h"/>
+		</Unit>
+		<Unit filename="C:/Users/maxgo/CLionProjects/ProjetAgenda/menu.h">
+			<Option target="timer.h"/>
 		</Unit>
 		<Unit filename="C:/Users/maxgo/CLionProjects/ProjetAgenda/timer.c">
-			<Option target="untitled"/>
+			<Option target="timer.h"/>
 		</Unit>
 		<Unit filename="C:/Users/maxgo/CLionProjects/ProjetAgenda/timer.h">
-			<Option target="untitled"/>
+			<Option target="timer.h"/>
 		</Unit>
 		<Unit filename="C:/Users/maxgo/CLionProjects/ProjetAgenda/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

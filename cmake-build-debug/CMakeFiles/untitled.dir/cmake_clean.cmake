@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/untitled.dir/cell.c.obj"
-  "CMakeFiles/untitled.dir/cell.c.obj.d"
+  "CMakeFiles/untitled.dir/agenda.c.obj"
+  "CMakeFiles/untitled.dir/agenda.c.obj.d"
   "CMakeFiles/untitled.dir/list.c.obj"
   "CMakeFiles/untitled.dir/list.c.obj.d"
   "CMakeFiles/untitled.dir/main.c.obj"

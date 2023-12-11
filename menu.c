@@ -8,6 +8,7 @@ void add_contact(t_agenda *agenda){
     char *prenom = scanString(("Quel est son prénom ?\n"));
     t_contact *contact = create_contact(nom, prenom, 4);
     insert_contact(agenda, contact);
+    return;
 }
 
 void affiche_level(t_agenda *agenda){
@@ -25,4 +26,5 @@ void affiche_level(t_agenda *agenda){
     else{
         affiche_level(agenda);
     }
+    return;
 }

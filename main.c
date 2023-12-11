@@ -26,11 +26,16 @@ int main(){
         switch (choix) {
             case 1 :
                 add_contact(agenda);
+                choix=1;
+                break;
             case 2:
                 affiche_level(agenda);
+                choix=1;
+                break;
             case 3:
                 display_agenda(*agenda);
-            break;
+                choix=1;
+                break;
         }
     }
 }

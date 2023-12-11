@@ -116,24 +116,48 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named untitled
+# Target rules for targets named timer.h
 
 # Build rule for target.
-untitled: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 untitled
-.PHONY : untitled
+timer.h: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 timer.h
+.PHONY : timer.h
 
 # fast build rule for target.
-untitled/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled.dir\build.make CMakeFiles/untitled.dir/build
-.PHONY : untitled/fast
+timer.h/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\timer.h.dir\build.make CMakeFiles/timer.h.dir/build
+.PHONY : timer.h/fast
+
+agenda.obj: agenda.c.obj
+.PHONY : agenda.obj
+
+# target to build an object file
+agenda.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\timer.h.dir\build.make CMakeFiles/timer.h.dir/agenda.c.obj
+.PHONY : agenda.c.obj
+
+agenda.i: agenda.c.i
+.PHONY : agenda.i
+
+# target to preprocess a source file
+agenda.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\timer.h.dir\build.make CMakeFiles/timer.h.dir/agenda.c.i
+.PHONY : agenda.c.i
+
+agenda.s: agenda.c.s
+.PHONY : agenda.s
+
+# target to generate assembly for a file
+agenda.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\timer.h.dir\build.make CMakeFiles/timer.h.dir/agenda.c.s
+.PHONY : agenda.c.s
 
 cell.obj: cell.c.obj
 .PHONY : cell.obj
 
 # target to build an object file
 cell.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled.dir\build.make CMakeFiles/untitled.dir/cell.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\timer.h.dir\build.make CMakeFiles/timer.h.dir/cell.c.obj
 .PHONY : cell.c.obj
 
 cell.i: cell.c.i
@@ -141,7 +165,7 @@ cell.i: cell.c.i
 
 # target to preprocess a source file
 cell.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled.dir\build.make CMakeFiles/untitled.dir/cell.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\timer.h.dir\build.make CMakeFiles/timer.h.dir/cell.c.i
 .PHONY : cell.c.i
 
 cell.s: cell.c.s
@@ -149,7 +173,7 @@ cell.s: cell.c.s
 
 # target to generate assembly for a file
 cell.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled.dir\build.make CMakeFiles/untitled.dir/cell.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\timer.h.dir\build.make CMakeFiles/timer.h.dir/cell.c.s
 .PHONY : cell.c.s
 
 list.obj: list.c.obj
@@ -157,7 +181,7 @@ list.obj: list.c.obj
 
 # target to build an object file
 list.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled.dir\build.make CMakeFiles/untitled.dir/list.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\timer.h.dir\build.make CMakeFiles/timer.h.dir/list.c.obj
 .PHONY : list.c.obj
 
 list.i: list.c.i
@@ -165,7 +189,7 @@ list.i: list.c.i
 
 # target to preprocess a source file
 list.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled.dir\build.make CMakeFiles/untitled.dir/list.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\timer.h.dir\build.make CMakeFiles/timer.h.dir/list.c.i
 .PHONY : list.c.i
 
 list.s: list.c.s
@@ -173,7 +197,7 @@ list.s: list.c.s
 
 # target to generate assembly for a file
 list.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled.dir\build.make CMakeFiles/untitled.dir/list.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\timer.h.dir\build.make CMakeFiles/timer.h.dir/list.c.s
 .PHONY : list.c.s
 
 main.obj: main.c.obj
@@ -181,7 +205,7 @@ main.obj: main.c.obj
 
 # target to build an object file
 main.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled.dir\build.make CMakeFiles/untitled.dir/main.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\timer.h.dir\build.make CMakeFiles/timer.h.dir/main.c.obj
 .PHONY : main.c.obj
 
 main.i: main.c.i
@@ -189,7 +213,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled.dir\build.make CMakeFiles/untitled.dir/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\timer.h.dir\build.make CMakeFiles/timer.h.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -197,15 +221,39 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled.dir\build.make CMakeFiles/untitled.dir/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\timer.h.dir\build.make CMakeFiles/timer.h.dir/main.c.s
 .PHONY : main.c.s
+
+menu.obj: menu.c.obj
+.PHONY : menu.obj
+
+# target to build an object file
+menu.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\timer.h.dir\build.make CMakeFiles/timer.h.dir/menu.c.obj
+.PHONY : menu.c.obj
+
+menu.i: menu.c.i
+.PHONY : menu.i
+
+# target to preprocess a source file
+menu.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\timer.h.dir\build.make CMakeFiles/timer.h.dir/menu.c.i
+.PHONY : menu.c.i
+
+menu.s: menu.c.s
+.PHONY : menu.s
+
+# target to generate assembly for a file
+menu.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\timer.h.dir\build.make CMakeFiles/timer.h.dir/menu.c.s
+.PHONY : menu.c.s
 
 timer.obj: timer.c.obj
 .PHONY : timer.obj
 
 # target to build an object file
 timer.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled.dir\build.make CMakeFiles/untitled.dir/timer.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\timer.h.dir\build.make CMakeFiles/timer.h.dir/timer.c.obj
 .PHONY : timer.c.obj
 
 timer.i: timer.c.i
@@ -213,7 +261,7 @@ timer.i: timer.c.i
 
 # target to preprocess a source file
 timer.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled.dir\build.make CMakeFiles/untitled.dir/timer.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\timer.h.dir\build.make CMakeFiles/timer.h.dir/timer.c.i
 .PHONY : timer.c.i
 
 timer.s: timer.c.s
@@ -221,7 +269,7 @@ timer.s: timer.c.s
 
 # target to generate assembly for a file
 timer.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled.dir\build.make CMakeFiles/untitled.dir/timer.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\timer.h.dir\build.make CMakeFiles/timer.h.dir/timer.c.s
 .PHONY : timer.c.s
 
 # Help Target
@@ -232,7 +280,10 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... untitled
+	@echo ... timer.h
+	@echo ... agenda.obj
+	@echo ... agenda.i
+	@echo ... agenda.s
 	@echo ... cell.obj
 	@echo ... cell.i
 	@echo ... cell.s
@@ -242,6 +293,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... menu.obj
+	@echo ... menu.i
+	@echo ... menu.s
 	@echo ... timer.obj
 	@echo ... timer.i
 	@echo ... timer.s

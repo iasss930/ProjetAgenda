@@ -78,7 +78,11 @@ void fill_list(t_d_list *list){
     }
     for(int i = 0; i < taille; i++){
         t_d_cell  *cell = create_cell(i + 1, list->max_level);
-        insert_cell(list, cell, tab[i]);
+        t_d_cell *prev = list->head[0];
+        while (prev != NULL){
+            prev = prev->next[i];
+        }
+        prev->next[i] = cell;
     }
     return;
 }
@@ -122,9 +126,9 @@ void insert_cell(t_d_list *list, t_d_cell *cell){
             }
             else {
                 while (prev->next != NULL) {
-                    prev = prev->next;
+                    prev = prev->next[i];
                 }
-                prev->next = next;
+                prev->next[i] = next;
             }
         }
     }
