@@ -1,5 +1,5 @@
-#ifndef UNTITLED_PARTIE3_H
-#define UNTITLED_PARTIE3_H
+#ifndef AGENDA_H
+#define AGENDA_H
 
 
 typedef struct s_rendezvous {
@@ -37,7 +37,7 @@ t_agenda *create_agenda(void);
 t_contact *create_contact(char *, char *, int);
 void display_ag_level(t_agenda, int );
 void display_agenda(t_agenda);
-void insert_contact(t_agenda *agenda, t_contact *contact, t_contact *prev, t_contact *next);
+void insert_contact(t_agenda *agenda, t_contact *contact);
 char *minuscule(char *);
 
 

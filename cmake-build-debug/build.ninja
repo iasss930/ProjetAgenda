@@ -38,53 +38,59 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = /Users/kaisluce/Library/CloudStorage/OneDrive-Efrei/L2/Semestre$ 3/ProjetC/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target untitled
+# Object build statements for EXECUTABLE target timer.h
 
 
 #############################################
-# Order-only phony target for untitled
+# Order-only phony target for timer.h
 
-build cmake_object_order_depends_target_untitled: phony || CMakeFiles/untitled.dir
+build cmake_object_order_depends_target_timer.h: phony || CMakeFiles/timer.h.dir
 
-build CMakeFiles/untitled.dir/timer.c.o: C_COMPILER__untitled_Debug /Users/kaisluce/Library/CloudStorage/OneDrive-Efrei/L2/Semestre$ 3/ProjetC/timer.c || cmake_object_order_depends_target_untitled
-  DEP_FILE = CMakeFiles/untitled.dir/timer.c.o.d
+build CMakeFiles/timer.h.dir/timer.c.o: C_COMPILER__timer.2eh_Debug /Users/kaisluce/Library/CloudStorage/OneDrive-Efrei/L2/Semestre$ 3/ProjetC/timer.c || cmake_object_order_depends_target_timer.h
+  DEP_FILE = CMakeFiles/timer.h.dir/timer.c.o.d
   FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics -std=gnu2x
-  OBJECT_DIR = CMakeFiles/untitled.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled.dir
+  OBJECT_DIR = CMakeFiles/timer.h.dir
+  OBJECT_FILE_DIR = CMakeFiles/timer.h.dir
 
-build CMakeFiles/untitled.dir/main.c.o: C_COMPILER__untitled_Debug /Users/kaisluce/Library/CloudStorage/OneDrive-Efrei/L2/Semestre$ 3/ProjetC/main.c || cmake_object_order_depends_target_untitled
-  DEP_FILE = CMakeFiles/untitled.dir/main.c.o.d
+build CMakeFiles/timer.h.dir/main.c.o: C_COMPILER__timer.2eh_Debug /Users/kaisluce/Library/CloudStorage/OneDrive-Efrei/L2/Semestre$ 3/ProjetC/main.c || cmake_object_order_depends_target_timer.h
+  DEP_FILE = CMakeFiles/timer.h.dir/main.c.o.d
   FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics -std=gnu2x
-  OBJECT_DIR = CMakeFiles/untitled.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled.dir
+  OBJECT_DIR = CMakeFiles/timer.h.dir
+  OBJECT_FILE_DIR = CMakeFiles/timer.h.dir
 
-build CMakeFiles/untitled.dir/list.c.o: C_COMPILER__untitled_Debug /Users/kaisluce/Library/CloudStorage/OneDrive-Efrei/L2/Semestre$ 3/ProjetC/list.c || cmake_object_order_depends_target_untitled
-  DEP_FILE = CMakeFiles/untitled.dir/list.c.o.d
+build CMakeFiles/timer.h.dir/list.c.o: C_COMPILER__timer.2eh_Debug /Users/kaisluce/Library/CloudStorage/OneDrive-Efrei/L2/Semestre$ 3/ProjetC/list.c || cmake_object_order_depends_target_timer.h
+  DEP_FILE = CMakeFiles/timer.h.dir/list.c.o.d
   FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics -std=gnu2x
-  OBJECT_DIR = CMakeFiles/untitled.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled.dir
+  OBJECT_DIR = CMakeFiles/timer.h.dir
+  OBJECT_FILE_DIR = CMakeFiles/timer.h.dir
 
-build CMakeFiles/untitled.dir/agenda.c.o: C_COMPILER__untitled_Debug /Users/kaisluce/Library/CloudStorage/OneDrive-Efrei/L2/Semestre$ 3/ProjetC/agenda.c || cmake_object_order_depends_target_untitled
-  DEP_FILE = CMakeFiles/untitled.dir/agenda.c.o.d
+build CMakeFiles/timer.h.dir/agenda.c.o: C_COMPILER__timer.2eh_Debug /Users/kaisluce/Library/CloudStorage/OneDrive-Efrei/L2/Semestre$ 3/ProjetC/agenda.c || cmake_object_order_depends_target_timer.h
+  DEP_FILE = CMakeFiles/timer.h.dir/agenda.c.o.d
   FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics -std=gnu2x
-  OBJECT_DIR = CMakeFiles/untitled.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled.dir
+  OBJECT_DIR = CMakeFiles/timer.h.dir
+  OBJECT_FILE_DIR = CMakeFiles/timer.h.dir
+
+build CMakeFiles/timer.h.dir/menu.c.o: C_COMPILER__timer.2eh_Debug /Users/kaisluce/Library/CloudStorage/OneDrive-Efrei/L2/Semestre$ 3/ProjetC/menu.c || cmake_object_order_depends_target_timer.h
+  DEP_FILE = CMakeFiles/timer.h.dir/menu.c.o.d
+  FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics -std=gnu2x
+  OBJECT_DIR = CMakeFiles/timer.h.dir
+  OBJECT_FILE_DIR = CMakeFiles/timer.h.dir
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target untitled
+# Link build statements for EXECUTABLE target timer.h
 
 
 #############################################
-# Link the executable untitled
+# Link the executable timer.h
 
-build untitled: C_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/timer.c.o CMakeFiles/untitled.dir/main.c.o CMakeFiles/untitled.dir/list.c.o CMakeFiles/untitled.dir/agenda.c.o
+build timer.h: C_EXECUTABLE_LINKER__timer.2eh_Debug CMakeFiles/timer.h.dir/timer.c.o CMakeFiles/timer.h.dir/main.c.o CMakeFiles/timer.h.dir/list.c.o CMakeFiles/timer.h.dir/agenda.c.o CMakeFiles/timer.h.dir/menu.c.o
   FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk
-  OBJECT_DIR = CMakeFiles/untitled.dir
+  OBJECT_DIR = CMakeFiles/timer.h.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = untitled
-  TARGET_PDB = untitled.dbg
+  TARGET_FILE = timer.h
+  TARGET_PDB = timer.h.dbg
 
 
 #############################################
@@ -120,7 +126,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /Users/kaisluce/Library/CloudStorage/OneDrive-Efrei/L2/Semestre 3/ProjetC/cmake-build-debug
 
-build all: phony untitled
+build all: phony timer.h
 
 # =============================================================================
 # Built-in targets

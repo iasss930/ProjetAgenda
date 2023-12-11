@@ -104,7 +104,7 @@ void display_agenda(t_agenda agenda) {
 }
 
 
-void insert_contact(t_agenda *agenda, t_contact *contact, t_contact *prev, t_contact *next) {
+void insert_contact(t_agenda *agenda, t_contact *contact) {
     if (agenda->contacts[0] == NULL){
         for(int i = 0; i < 4; i++){
             agenda->contacts[i] = contact;
